@@ -1,0 +1,6 @@
+* { list-style: none; text-decoration: none; margin: 0; padding: 0; }
+.board { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.board td { width: 50px; height: 50px; }
+.chessPiece { font-size: 40px; z-index: 1;}
+.board table, .board td { border: 1px solid black; border-collapse: collapse; text-align: center; background-color: lightgoldenrodyellow; }
+.board table td.brown { background-color: brown; }

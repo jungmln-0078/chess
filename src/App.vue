@@ -1,26 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h3 style="text-align: center; margin-top: 128px; font-size: 32px;">{{ store.state.turn }}</h3>
+    <board />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import board from './components/Board.vue'
+import { useStore } from 'vuex'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components: { board },
+  setup() {
+    const store = useStore();
+    return { store };
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
